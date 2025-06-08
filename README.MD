@@ -41,6 +41,7 @@ Layanan seperti `apache2` yang tidak digunakan berhasil dinonaktifkan. Dicek kem
 <summary>📷 Lihat Screenshot</summary>
 <img width="100%" align="centre" src="https://raw.githubusercontent.com/inrexna/ubuntu-hardening-22.04/main/src/image/2.1.png" />
 </details>
+
 ---
 
 ## ✅ 3. Konfigurasi SSH (CIS 5.2.)
@@ -72,6 +73,7 @@ SSH berhasil dikonfigurasi dengan membatasi akses login root, menonaktifkan pass
 <summary>📷 Lihat Screenshot</summary>
 <img width="100%" align="centre" src="https://raw.githubusercontent.com/inrexna/ubuntu-hardening-22.04/main/src/image/3.png" />
 </details>
+
 ---
 
 ## ✅ 4. Konfigurasi Firewall dengan UFW (CIS 3.5.)
@@ -92,6 +94,7 @@ Hanya port SSH (`22/tcp`) yang terbuka dari luar. Dapat diverifikasi dengan `ufw
 <summary>📷 Lihat Screenshot</summary>
 <img width="100%" align="centre" src="https://raw.githubusercontent.com/inrexna/ubuntu-hardening-22.04/main/src/image/4.png" />
 </details>
+
 ---
 
 ## ✅ 5. Nonaktifkan IPv6 jika Tidak Digunakan (CIS 3.2.)
@@ -125,6 +128,7 @@ IPv6 berhasil dinonaktifkan. Dapat diverifikasi dengan `ip a` atau `cat /proc/sy
 <summary>📷 Lihat Screenshot</summary>
 <img width="100%" align="centre" src="https://raw.githubusercontent.com/inrexna/ubuntu-hardening-22.04/main/src/image/5.1.png" />
 </details>
+
 ---
 
 ## ✅ 6. Nonaktifkan USB Storage (Opsional)
@@ -138,6 +142,7 @@ update-initramfs -u
 
 📄 **Dokumentasi:**  
 USB storage tidak bisa digunakan. Diuji dengan mencolokkan flashdisk dan dicek melalui `dmesg` (tidak terdeteksi sebagai storage).
+
 ---
 
 ## ✅ 7. Mengaktifkan Fail2Ban (CIS 5.3.)
@@ -195,6 +200,7 @@ Fail2Ban berhasil berjalan dan dikonfigurasi untuk melindungi SSH. Uji coba brut
 <summary>📷 Lihat Screenshot</summary>
 <img width="100%" align="centre" src="https://raw.githubusercontent.com/inrexna/ubuntu-hardening-22.04/main/src/image/7.3.png" />
 </details>
+
 ---
 
 ## ✅ 8. Mengaktifkan Auditd (CIS 4.1.)
@@ -238,6 +244,7 @@ Log hasil audit dapat dilihat dengan:
 <summary>📷 Lihat Screenshot</summary>
 <img width="100%" align="centre" src="https://raw.githubusercontent.com/inrexna/ubuntu-hardening-22.04/main/src/image/8.2.png" />
 </details>
+
 ---
 
 ## ✅ 9. Mengatur Izin Akses Cron (CIS 5.1.)
@@ -260,6 +267,7 @@ Setelah konfigurasi, hanya user yang ditambahkan ke dalam file `/etc/cron.allow`
 <summary>📷 Lihat Screenshot</summary>
 <img width="100%" align="centre" src="https://raw.githubusercontent.com/inrexna/ubuntu-hardening-22.04/main/src/image/9.png" />
 </details>
+
 ---
 
 ## ✅ 10. Mengatur Hak Akses File Penting (CIS 6.1.)
@@ -333,6 +341,7 @@ sysctl -p
 
 📄 **Dokumentasi:**  
 Parameter berhasil dimuat ulang. Pengaturan ini membantu memperketat keamanan jaringan dan menonaktifkan fitur yang tidak dibutuhkan.
+
 ---
 
 ## ✅ 12. Mengaktifkan dan Mengelola AppArmor (CIS 1.6.)
@@ -363,6 +372,7 @@ AppArmor aktif dan berjalan. Semua profil dalam mode `enforce` membatasi akses a
 <summary>📷 Lihat Screenshot</summary>
 <img width="100%" align="centre" src="https://raw.githubusercontent.com/inrexna/ubuntu-hardening-22.04/main/src/image/12.1.png" />
 </details>
+
 ---
 
 ## ✅ 13. Audit Keamanan Sistem dengan Lynis
@@ -390,6 +400,7 @@ Lynis akan memeriksa konfigurasi, permission, status layanan, dan memberikan rek
 <summary>📷 Lihat Screenshot</summary>
 <img width="100%" align="centre" src="https://raw.githubusercontent.com/inrexna/ubuntu-hardening-22.04/main/src/image/12.2.png" />
 </details>
+
 ---
 ```
 /var/log/lynis.log
